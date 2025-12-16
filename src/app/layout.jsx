@@ -4,7 +4,7 @@ export const metadata = {
   title: "lunchmoney",
   description: "Lunch Money Application",
   icons: {
-    icon: "/vite.svg",
+    icon: "/favicon.png",
   },
 };
 
