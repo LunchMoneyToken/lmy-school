@@ -9,6 +9,7 @@ export default function AdminLayout({ children }) {
     const pathname = usePathname();
     const [authenticated, setAuthenticated] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     useEffect(() => {
         checkAuth();
@@ -69,11 +70,34 @@ export default function AdminLayout({ children }) {
 
     return (
         <div className="min-h-screen bg-gray-50 flex">
+            {/* Mobile Overlay */}
+            {sidebarOpen && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+                    onClick={() => setSidebarOpen(false)}
+                />
+            )}
+
             {/* Sidebar */}
-            <div className="w-64 bg-[#0D4E9E] text-white flex flex-col h-screen fixed left-0 top-0 overflow-y-auto">
-                <div className="p-6 border-b border-blue-700">
-                    <h1 className="text-2xl font-bold">Admin Panel</h1>
-                    <p className="text-sm text-blue-200 mt-1">Lunch Money</p>
+            <div className={`
+                w-64 bg-[#0D4E9E] text-white flex flex-col h-screen fixed left-0 top-0 overflow-y-auto z-50
+                transform transition-transform duration-300 ease-in-out
+                lg:translate-x-0
+                ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+            `}>
+                <div className="p-4 lg:p-6 border-b border-blue-700">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <h1 className="text-xl lg:text-2xl font-bold">Admin Panel</h1>
+                            <p className="text-xs lg:text-sm text-blue-200 mt-1">Lunch Money</p>
+                        </div>
+                        <button
+                            onClick={() => setSidebarOpen(false)}
+                            className="lg:hidden text-white hover:text-gray-300 text-2xl"
+                        >
+                            ×
+                        </button>
+                    </div>
                 </div>
                 
                 <nav className="flex-1 p-4">
@@ -82,7 +106,7 @@ export default function AdminLayout({ children }) {
                             <li key={item.path}>
                                 <Link
                                     href={item.available ? item.path : '#'}
-                                    className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
+                                    className={`flex items-center gap-2 lg:gap-3 px-3 lg:px-4 py-2 lg:py-3 rounded-lg transition-all text-sm lg:text-base ${
                                         pathname === item.path
                                             ? 'bg-[#FF8823] text-white font-semibold'
                                             : item.available
@@ -92,11 +116,13 @@ export default function AdminLayout({ children }) {
                                     onClick={(e) => {
                                         if (!item.available) {
                                             e.preventDefault();
+                                        } else {
+                                            setSidebarOpen(false);
                                         }
                                     }}
                                 >
-                                    <span className="text-xl">{item.icon}</span>
-                                    <span className="flex-1">{item.name}</span>
+                                    <span className="text-lg lg:text-xl">{item.icon}</span>
+                                    <span className="flex-1 truncate">{item.name}</span>
                                     {!item.available && (
                                         <span className="text-xs bg-blue-800 px-2 py-1 rounded">Soon</span>
                                     )}
@@ -109,7 +135,7 @@ export default function AdminLayout({ children }) {
                 <div className="p-4 border-t border-blue-700">
                     <button
                         onClick={handleLogout}
-                        className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                        className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm lg:text-base"
                     >
                         <span>🚪</span>
                         <span>Logout</span>
@@ -118,7 +144,18 @@ export default function AdminLayout({ children }) {
             </div>
 
             {/* Main Content */}
-            <div className="flex-1 ml-64">
+            <div className="flex-1 lg:ml-64 w-full">
+                {/* Mobile Header */}
+                <div className="lg:hidden bg-[#0D4E9E] text-white p-4 flex items-center justify-between sticky top-0 z-30">
+                    <button
+                        onClick={() => setSidebarOpen(true)}
+                        className="text-white hover:text-gray-300 text-2xl"
+                    >
+                        ☰
+                    </button>
+                    <h1 className="text-lg font-bold">Admin Panel</h1>
+                    <div className="w-8"></div> {/* Spacer for centering */}
+                </div>
                 {children}
             </div>
         </div>

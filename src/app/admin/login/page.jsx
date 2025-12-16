@@ -56,11 +56,11 @@ export default function AdminLogin() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0D4E9E] to-[#FF8823] px-5">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
-                <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-[#0D4E9E] mb-2">Admin Login</h1>
-                    <p className="text-gray-600">Enter your credentials to access the admin panel</p>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0D4E9E] to-[#FF8823] px-4 lg:px-5 py-8">
+            <div className="bg-white rounded-xl lg:rounded-2xl shadow-2xl p-6 lg:p-8 w-full max-w-md">
+                <div className="text-center mb-6 lg:mb-8">
+                    <h1 className="text-2xl lg:text-3xl font-bold text-[#0D4E9E] mb-2">Admin Login</h1>
+                    <p className="text-sm lg:text-base text-gray-600">Enter your credentials to access the admin panel</p>
                 </div>
                 
                 {error && (

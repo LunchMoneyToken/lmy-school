@@ -99,11 +99,11 @@ export default function ContactInfoPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 py-8 px-5">
+        <div className="min-h-screen bg-gray-50 py-4 lg:py-8 px-4 lg:px-5">
             <div className="max-w-4xl mx-auto">
                 <div className="mb-6">
-                    <h1 className="text-3xl font-bold text-[#0D4E9E] mb-2">Contact Information</h1>
-                    <p className="text-gray-600">Manage email and phone number displayed in the footer</p>
+                    <h1 className="text-2xl lg:text-3xl font-bold text-[#0D4E9E] mb-2">Contact Information</h1>
+                    <p className="text-sm lg:text-base text-gray-600">Manage email and phone number displayed in the footer</p>
                 </div>
 
                 {error && (
@@ -118,7 +118,7 @@ export default function ContactInfoPage() {
                     </div>
                 )}
 
-                <div className="bg-white rounded-2xl shadow-lg p-6">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 lg:p-6">
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -128,11 +128,11 @@ export default function ContactInfoPage() {
                                 type="email"
                                 value={contactInfo.email}
                                 onChange={(e) => setContactInfo({...contactInfo, email: e.target.value})}
-                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D4E9E] focus:border-transparent"
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D4E9E] focus:border-transparent text-sm lg:text-base"
                                 placeholder="example@email.com"
                                 required
                             />
-                            <p className="mt-1 text-sm text-gray-500">This email will be displayed in the footer</p>
+                            <p className="mt-1 text-xs lg:text-sm text-gray-500">This email will be displayed in the footer</p>
                         </div>
 
                         <div>
@@ -143,34 +143,34 @@ export default function ContactInfoPage() {
                                 type="text"
                                 value={contactInfo.phone}
                                 onChange={(e) => setContactInfo({...contactInfo, phone: e.target.value})}
-                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D4E9E] focus:border-transparent"
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D4E9E] focus:border-transparent text-sm lg:text-base"
                                 placeholder="+1 234 567 8900"
                                 required
                             />
-                            <p className="mt-1 text-sm text-gray-500">This phone number will be displayed in the footer</p>
+                            <p className="mt-1 text-xs lg:text-sm text-gray-500">This phone number will be displayed in the footer</p>
                         </div>
 
-                        <div className="flex gap-3 pt-4">
+                        <div className="flex flex-col sm:flex-row gap-3 pt-4">
                             <button
                                 type="submit"
                                 disabled={saving}
-                                className="bg-[#0D4E9E] text-white px-6 py-3 rounded-lg hover:bg-[#0a3d7a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                                className="bg-[#0D4E9E] text-white px-4 lg:px-6 py-2 lg:py-3 rounded-lg hover:bg-[#0a3d7a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold text-sm lg:text-base"
                             >
                                 {saving ? 'Saving...' : 'Save Changes'}
                             </button>
                             <button
                                 type="button"
                                 onClick={fetchContactInfo}
-                                className="bg-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-400 transition-colors font-semibold"
+                                className="bg-gray-300 text-gray-700 px-4 lg:px-6 py-2 lg:py-3 rounded-lg hover:bg-gray-400 transition-colors font-semibold text-sm lg:text-base"
                             >
                                 Reset
                             </button>
                         </div>
                     </form>
 
-                    <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+                    <div className="mt-6 lg:mt-8 p-4 bg-blue-50 rounded-lg">
                         <h3 className="text-sm font-semibold text-[#0D4E9E] mb-2">Preview</h3>
-                        <div className="text-sm text-gray-700 space-y-1">
+                        <div className="text-xs lg:text-sm text-gray-700 space-y-1">
                             <p><strong>Email:</strong> {contactInfo.email || 'Not set'}</p>
                             <p><strong>Phone:</strong> {contactInfo.phone || 'Not set'}</p>
                         </div>

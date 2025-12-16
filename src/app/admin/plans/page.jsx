@@ -182,14 +182,14 @@ export default function PlansPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 py-8 px-5">
+        <div className="min-h-screen bg-gray-50 py-4 lg:py-8 px-4 lg:px-5">
             <div className="max-w-7xl mx-auto">
-                <div className="mb-6 flex justify-between items-center">
+                <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
-                        <h1 className="text-3xl font-bold text-[#0D4E9E] mb-2">Plans Management</h1>
-                        <p className="text-gray-600">Create and manage subscription plans</p>
+                        <h1 className="text-2xl lg:text-3xl font-bold text-[#0D4E9E] mb-2">Plans Management</h1>
+                        <p className="text-sm lg:text-base text-gray-600">Create and manage subscription plans</p>
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                         {plans.length === 0 && (
                             <button
                                 onClick={async () => {
@@ -214,7 +214,7 @@ export default function PlansPage() {
                                         setLoading(false);
                                     }
                                 }}
-                                className="bg-[#FF8823] text-white px-6 py-2 rounded-lg hover:bg-[#e6771a] transition-colors"
+                                className="bg-[#FF8823] text-white px-4 lg:px-6 py-2 rounded-lg hover:bg-[#e6771a] transition-colors text-sm lg:text-base"
                             >
                                 🌱 Seed Default Plans
                             </button>
@@ -224,7 +224,7 @@ export default function PlansPage() {
                                 resetForm();
                                 setShowForm(true);
                             }}
-                            className="bg-[#0D4E9E] text-white px-6 py-2 rounded-lg hover:bg-[#0a3d7a] transition-colors"
+                            className="bg-[#0D4E9E] text-white px-4 lg:px-6 py-2 rounded-lg hover:bg-[#0a3d7a] transition-colors text-sm lg:text-base"
                         >
                             + Create New Plan
                         </button>
@@ -238,12 +238,12 @@ export default function PlansPage() {
                 )}
 
                 {showForm && (
-                    <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
-                        <h2 className="text-2xl font-semibold text-[#0D4E9E] mb-4">
+                    <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 lg:p-6 mb-6">
+                        <h2 className="text-xl lg:text-2xl font-semibold text-[#0D4E9E] mb-4">
                             {editingId ? 'Edit Plan' : 'Create New Plan'}
                         </h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1">
                                         Plan Title *
@@ -252,7 +252,7 @@ export default function PlansPage() {
                                         type="text"
                                         value={formData.title}
                                         onChange={(e) => setFormData({...formData, title: e.target.value})}
-                                        className="w-full p-2 border rounded-lg"
+                                        className="w-full p-2 border rounded-lg text-sm lg:text-base"
                                         required
                                     />
                                 </div>
@@ -264,7 +264,7 @@ export default function PlansPage() {
                                         type="text"
                                         value={formData.for}
                                         onChange={(e) => setFormData({...formData, for: e.target.value})}
-                                        className="w-full p-2 border rounded-lg"
+                                        className="w-full p-2 border rounded-lg text-sm lg:text-base"
                                         required
                                     />
                                 </div>
@@ -280,14 +280,14 @@ export default function PlansPage() {
                                             type="text"
                                             value={feature}
                                             onChange={(e) => updateFeature(index, e.target.value)}
-                                            className="flex-1 p-2 border rounded-lg"
+                                            className="flex-1 p-2 border rounded-lg text-sm lg:text-base"
                                             placeholder={`Feature ${index + 1}`}
                                         />
                                         {formData.features.length > 1 && (
                                             <button
                                                 type="button"
                                                 onClick={() => removeFeature(index)}
-                                                className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+                                                className="bg-red-500 text-white px-3 lg:px-4 py-2 rounded-lg hover:bg-red-600 text-sm lg:text-base"
                                             >
                                                 Remove
                                             </button>
@@ -303,7 +303,7 @@ export default function PlansPage() {
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1">
                                         Button Text *
@@ -312,7 +312,7 @@ export default function PlansPage() {
                                         type="text"
                                         value={formData.button}
                                         onChange={(e) => setFormData({...formData, button: e.target.value})}
-                                        className="w-full p-2 border rounded-lg"
+                                        className="w-full p-2 border rounded-lg text-sm lg:text-base"
                                         required
                                     />
                                 </div>
@@ -324,7 +324,7 @@ export default function PlansPage() {
                                         type="number"
                                         value={formData.order}
                                         onChange={(e) => setFormData({...formData, order: parseInt(e.target.value) || 0})}
-                                        className="w-full p-2 border rounded-lg"
+                                        className="w-full p-2 border rounded-lg text-sm lg:text-base"
                                     />
                                 </div>
                             </div>
@@ -342,17 +342,17 @@ export default function PlansPage() {
                                 </label>
                             </div>
 
-                            <div className="flex gap-3">
+                            <div className="flex flex-col sm:flex-row gap-3">
                                 <button
                                     type="submit"
-                                    className="bg-[#0D4E9E] text-white px-6 py-2 rounded-lg hover:bg-[#0a3d7a] transition-colors"
+                                    className="bg-[#0D4E9E] text-white px-4 lg:px-6 py-2 rounded-lg hover:bg-[#0a3d7a] transition-colors text-sm lg:text-base"
                                 >
                                     {editingId ? 'Update Plan' : 'Create Plan'}
                                 </button>
                                 <button
                                     type="button"
                                     onClick={resetForm}
-                                    className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 transition-colors"
+                                    className="bg-gray-300 text-gray-700 px-4 lg:px-6 py-2 rounded-lg hover:bg-gray-400 transition-colors text-sm lg:text-base"
                                 >
                                     Cancel
                                 </button>
@@ -361,76 +361,129 @@ export default function PlansPage() {
                     </div>
                 )}
 
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="p-6 border-b">
-                        <h2 className="text-2xl font-semibold text-[#0D4E9E]">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg overflow-hidden">
+                    <div className="p-4 lg:p-6 border-b">
+                        <h2 className="text-xl lg:text-2xl font-semibold text-[#0D4E9E]">
                             All Plans ({plans.length})
                         </h2>
                     </div>
 
                     {plans.length === 0 ? (
-                        <div className="p-8 text-center text-gray-500">
+                        <div className="p-6 lg:p-8 text-center text-gray-500 text-sm lg:text-base">
                             No plans found. Create your first plan to get started.
                         </div>
                     ) : (
-                        <div className="overflow-x-auto">
-                            <table className="w-full">
-                                <thead className="bg-[#ECF1F8]">
-                                    <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Order</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Title</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">For</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Features</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Button</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Status</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="bg-white divide-y divide-gray-200">
-                                    {plans.map((plan) => (
-                                        <tr key={plan._id} className="hover:bg-gray-50">
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{plan.order}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{plan.title}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{plan.for}</td>
-                                            <td className="px-6 py-4 text-sm text-gray-500">
-                                                <ul className="list-disc list-inside">
-                                                    {plan.features.slice(0, 2).map((feature, idx) => (
-                                                        <li key={idx} className="truncate max-w-xs">{feature}</li>
-                                                    ))}
-                                                    {plan.features.length > 2 && (
-                                                        <li className="text-gray-400">+{plan.features.length - 2} more</li>
-                                                    )}
-                                                </ul>
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{plan.button}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                <span className={`px-2 py-1 text-xs rounded-full ${
-                                                    plan.isActive 
-                                                        ? 'bg-green-100 text-green-800' 
-                                                        : 'bg-gray-100 text-gray-800'
-                                                }`}>
-                                                    {plan.isActive ? 'Active' : 'Inactive'}
-                                                </span>
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                                <button
-                                                    onClick={() => handleEdit(plan)}
-                                                    className="text-[#FF8823] hover:text-[#e6771a] mr-3"
-                                                >
-                                                    Edit
-                                                </button>
-                                                <button
-                                                    onClick={() => handleDelete(plan._id)}
-                                                    className="text-red-600 hover:text-red-900"
-                                                >
-                                                    Delete
-                                                </button>
-                                            </td>
+                        <>
+                            {/* Desktop Table View */}
+                            <div className="hidden lg:block overflow-x-auto">
+                                <table className="w-full">
+                                    <thead className="bg-[#ECF1F8]">
+                                        <tr>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Order</th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Title</th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">For</th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Features</th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Button</th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Status</th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-[#626B75] uppercase tracking-wider">Actions</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                    </thead>
+                                    <tbody className="bg-white divide-y divide-gray-200">
+                                        {plans.map((plan) => (
+                                            <tr key={plan._id} className="hover:bg-gray-50">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{plan.order}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{plan.title}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{plan.for}</td>
+                                                <td className="px-6 py-4 text-sm text-gray-500">
+                                                    <ul className="list-disc list-inside">
+                                                        {plan.features.slice(0, 2).map((feature, idx) => (
+                                                            <li key={idx} className="truncate max-w-xs">{feature}</li>
+                                                        ))}
+                                                        {plan.features.length > 2 && (
+                                                            <li className="text-gray-400">+{plan.features.length - 2} more</li>
+                                                        )}
+                                                    </ul>
+                                                </td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{plan.button}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <span className={`px-2 py-1 text-xs rounded-full ${
+                                                        plan.isActive 
+                                                            ? 'bg-green-100 text-green-800' 
+                                                            : 'bg-gray-100 text-gray-800'
+                                                    }`}>
+                                                        {plan.isActive ? 'Active' : 'Inactive'}
+                                                    </span>
+                                                </td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                    <button
+                                                        onClick={() => handleEdit(plan)}
+                                                        className="text-[#FF8823] hover:text-[#e6771a] mr-3"
+                                                    >
+                                                        Edit
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleDelete(plan._id)}
+                                                        className="text-red-600 hover:text-red-900"
+                                                    >
+                                                        Delete
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            {/* Mobile Card View */}
+                            <div className="lg:hidden divide-y divide-gray-200">
+                                {plans.map((plan) => (
+                                    <div key={plan._id} className="p-4 hover:bg-gray-50">
+                                        <div className="flex items-start justify-between mb-3">
+                                            <div className="flex-1">
+                                                <h3 className="text-base font-semibold text-gray-900 mb-1">{plan.title}</h3>
+                                                <p className="text-sm text-gray-500">{plan.for}</p>
+                                            </div>
+                                            <span className={`px-2 py-1 text-xs rounded-full whitespace-nowrap ml-2 ${
+                                                plan.isActive 
+                                                    ? 'bg-green-100 text-green-800' 
+                                                    : 'bg-gray-100 text-gray-800'
+                                            }`}>
+                                                {plan.isActive ? 'Active' : 'Inactive'}
+                                            </span>
+                                        </div>
+                                        <div className="mb-3">
+                                            <p className="text-xs text-gray-500 mb-1">Features:</p>
+                                            <ul className="list-disc list-inside text-sm text-gray-700">
+                                                {plan.features.slice(0, 3).map((feature, idx) => (
+                                                    <li key={idx}>{feature}</li>
+                                                ))}
+                                                {plan.features.length > 3 && (
+                                                    <li className="text-gray-400">+{plan.features.length - 3} more</li>
+                                                )}
+                                            </ul>
+                                        </div>
+                                        <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+                                            <span>Order: {plan.order}</span>
+                                            <span>Button: {plan.button}</span>
+                                        </div>
+                                        <div className="flex gap-3 pt-2">
+                                            <button
+                                                onClick={() => handleEdit(plan)}
+                                                className="flex-1 text-[#FF8823] hover:text-[#e6771a] text-sm font-medium py-2 border border-[#FF8823] rounded-lg hover:bg-orange-50"
+                                            >
+                                                Edit
+                                            </button>
+                                            <button
+                                                onClick={() => handleDelete(plan._id)}
+                                                className="flex-1 text-red-600 hover:text-red-900 text-sm font-medium py-2 border border-red-600 rounded-lg hover:bg-red-50"
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
                     )}
                 </div>
             </div>
