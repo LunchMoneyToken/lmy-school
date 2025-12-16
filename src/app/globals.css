@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #E1E7EF;
+    font-family: "Titillium Web";
+}
+
+.archivo-font {
+font-family: "Archivo"
+}
+
+
+
+/* Orbit animation - rotates the container */
+@keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Counter-orbit - keeps cards upright while orbiting */
+  @keyframes counter-orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Apply to your elements */
+  .animate-orbit {
+    animation: orbit 25s linear infinite;
+  }
+  
+  .animate-counter-orbit {
+    animation: counter-orbit 25s linear infinite;
+  }
+  
+
+
+
+
+
+  /* wrapper */
+.testimonial-wrapper {
+    padding: 80px 0;
+    background: #eef2f6;
+  }
+  
+  /* swiper base */
+  .testimonial-swiper {
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* slides */
+  .testimonial-swiper .swiper-slide {
+    opacity: 0.3;
+    transform: scale(0.85);
+    transition: all 0.4s ease;
+  }
+  
+  /* active slide */
+  .testimonial-swiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* card */
+  .testimonial-card {
+    background: white;
+    border-radius: 16px;
+    padding: 60px 30px 40px 30px;
+    text-align: center;
+    min-height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* image - positioned above card */
+  .testimonial-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  /* text */
+  .testimonial-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .testimonial-card span {
+    font-size: 14px;
+    color: #9aa3ad;
+  }
+  
+  .testimonial-card p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+  
+  /* navigation arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* previous button - gray/white */
+  .swiper-button-prev {
+    background: #bfbfbf;
+  }
+  
+  .swiper-button-prev::after {
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* next button - orange */
+  .swiper-button-next {
+    background: #FF8823;
+  }
+  
+  .swiper-button-next::after {
+    font-size: 14px;
+    color: white;
+  }
+  
