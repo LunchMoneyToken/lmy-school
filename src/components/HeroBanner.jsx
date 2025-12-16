@@ -11,7 +11,7 @@ export default function HeroSection() {
                     <p className="text-center text-[18px] sm:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[52px] font-[600] text-white px-2 sm:px-4 mt-3 sm:mt-4 leading-tight sm:leading-normal">
                         With a Hedge That Protects <br className="hidden sm:block" />Every Student
                     </p>
-                    <p className="text-center text-[11px] sm:text-[13px] md:text-[15px] lg:text-[16px] mt-3 sm:mt-4 md:mt-5 font-[200] text-white px-4 sm:px-6 leading-relaxed">Lunch Money offsets unpaid meal balances so no child is ever denied lunch. </p>
+                    <p className="text-center text-[11px] sm:text-[13px] md:text-[15px] lg:text-[16px] mt-3 sm:mt-4 md:mt-5 font-[200] text-white px-4 sm:px-6 leading-relaxed">Lunch Money converts real funding into on-chain offset credits that automatically eliminate unpaid school lunch balances.</p>
                     <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-3 justify-center mt-6 sm:mt-8 md:mt-10 px-4 sm:px-6">
                         <button className="bg-[#3CB371] px-4 sm:px-5 py-2.5 sm:py-2 rounded-md text-white font-[600] text-[11px] sm:text-[13px] md:text-[14px] shadow-3xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#2e8b57] active:scale-95 transform w-full sm:w-auto text-center whitespace-nowrap">
                             View Your School's Lunch Debt Bar

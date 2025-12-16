@@ -8,9 +8,9 @@ export default function Navbar() {
 
     const navItems = [
         { label: "Home", id: "home" },
-        { label: "How it works", id: "how-it-works" },
         { label: "Benefits", id: "benefits" },
-        { label: "Track Rewards", id: "track-rewards" },
+        { label: "How it works", id: "how-it-works" },
+        { label: "Track Hedge", id: "track-rewards" },
         { label: "Converter", id: "track-rewards" },
         { label: "Reviews", id: "reviews" },
         { label: "Plans", id: "plans" }

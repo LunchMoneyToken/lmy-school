@@ -75,7 +75,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 lg:gap-0">
                     <div className="flex flex-col items-start gap-6 sm:gap-8 w-full md:w-auto">
                         <Image src="/assets/navLogo.svg" alt="logo" width={88} height={88} className="h-16 sm:h-20 md:h-22" />
-                        <p className='text-xs sm:text-sm md:text-[14px] text-[#B3B6B9] font-[300]'>Lunch Money — Protecting <br className="hidden sm:block" /> Students. Eliminating Debt. </p>
+                        <p className='text-xs sm:text-sm md:text-[14px] text-[#B3B6B9] font-[300]'>Lunch Money — On-chain <br className="hidden sm:block" /> offset credits . </p>
                     </div>
                     <div className='flex flex-col items-start gap-3 sm:gap-4 w-full md:w-auto'>
                         <h1 className='text-base sm:text-lg md:text-[20px] text-white font-[600]'>Explore Site</h1>

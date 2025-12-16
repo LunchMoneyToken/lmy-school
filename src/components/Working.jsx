@@ -8,9 +8,9 @@ const Working = () => {
       iconImage: "/assets/work1.png",
       iconwidth: "40px",
       iconheight: "40px",
-      title: "Schools Serve Meals",
+      title: "Fund the Pool",
       description:
-        "Schools track meals like they normally do. Lunch Money monitors emerging debt.",
+        "Donors contribute funds to the Lunch Money pool to protect schools from unpaid lunch debt.",
     },
     {
       number: "02",
@@ -18,9 +18,9 @@ const Working = () => {
       iconImage: "/assets/work2.png",
       iconwidth: "40px",
       iconheight: "40px",
-      title: "Hedge Balance Grows",
+      title: "LMY Offset Credits Are Issued",
       description:
-        "Funds contributed to Lunch Money increase hedge coverage for the school. ",
+        "The protocol issues Lunch Money (LMY) offset credits equal to the funded amount.",
     },
     {
       number: "03",
@@ -28,9 +28,9 @@ const Working = () => {
       iconImage: "/assets/work3.png",
       iconwidth: "40px",
       iconheight: "40px",
-      title: "School Becomes Debt-Free",
+      title: "The Protocol Applies LMY",
       description:
-        "When coverage reaches 100%, the school becomes Lunch Money Certified: Debt-Free ",
+        "Using automated rules, the protocol applies LMY credits to reduce unpaid school lunch balances.",
     },
     {
       number: "04",
@@ -38,8 +38,8 @@ const Working = () => {
       iconImage: "/assets/work4.png",
       iconwidth: "40px",
       iconheight: "40px",
-      title: "Lunch Debt Gets Offset",
-      description: "The hedge automatically neutralizes unpaid balances.",
+      title: "LMY Is Retired, Debt Is Eliminated",
+      description: "Applied LMY credits are permanently retired (burned), and the school moves toward Lunch Money Certified: Debt-Free status.",
     },
   ];
 
@@ -91,7 +91,7 @@ const Working = () => {
                     <p className="text-[16px] md:text-[20px] font-[600] text-center">
                       {card.title}
                     </p>
-                    <p className="text-[12px] md:text-[16px] font-[300] text-center">
+                    <p className="text-[12px] px-2 md:text-[16px] font-[300] text-center">
                       {card.description}
                     </p>
                   </div>

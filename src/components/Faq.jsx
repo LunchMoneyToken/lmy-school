@@ -7,24 +7,72 @@ export default function Faq() {
 
     const faq = [
         {
-            question: "1. What is Lunch Money?",
-            answer: "Lunch Money is a school-focused financial hedge that helps offset and eliminate unpaid student meal balances. It ensures that no child is denied lunch due to inability to pay, while giving schools a transparent, real-time tool to monitor and reduce lunch debt."
+            question: "1. What problem does Lunch Money solve?",
+            answer: "Lunch Money eliminates unpaid school lunch debt so students are never denied meals due to lack of funds."
         },
         {
-            question: "2. How does the Lunch Money Hedge work?",
-            answer: "Schools report their current unpaid meal debt. Lunch Money allocates hedge funds that automatically cover negative balances as they occur. As the hedge grows, the school’s Lunch Debt Bar fills toward 100%, leading to full debt protection and Lunch Money certification."
+            question: "2. How does Lunch Money work in simple terms?",
+            answer: "Donors fund a pool. The system issues offset credits. Those credits automatically pay off school lunch debt. The credits are then permanently retired."
         },
         {
-            question: "3. Does Lunch Money change how students get lunch?",
-            answer: "No. Students continue to receive their meals the same way they always have. Lunch Money works in the background, offsetting debt so that students never face embarrassment, lunch shaming, alternate meals, or account denials."
+            question: "3. What is Lunch Money (LMY)?",
+            answer: "LMY is an on-chain offset credit used to eliminate school lunch debt. It is not a reward, investment, or yield-generating token."
         },
         {
-            question: "4. What do schools need to get started?",
-            answer: "Very little. Schools simply provide their current meal debt totals and student count. Lunch Money creates a dashboard with the school’s Lunch Debt Bar and begins allocating hedge coverage. No new equipment, software, or cafeteria changes are required."
+            question: "4. Is LMY a cryptocurrency investment?",
+            answer: "No. LMY is issued as proof of funding and retired when used to eliminate debt. It is not marketed or designed as an investment."
         },
         {
-            question: "5. Who can support a school’s hedge?",
-            answer: "Parents, community members, local businesses, nonprofits, and district partners can all contribute to strengthening a school’s hedge. These contributions directly increase hedge coverage, moving the school closer to being Lunch Money Certified: Debt-Free."
+            question: "5. Do schools receive or manage tokens?",
+            answer: "No. Schools never receive, hold, trade, or manage LMY. They receive only debt relief and certification status."
+        },
+        {
+            question: "6. Who receives LMY?",
+            answer: "LMY is issued to donors as an on-chain record of their contribution and offset capacity."
+        },
+        {
+            question: "7. Can donors choose which schools to support?",
+            answer: "Yes—optionally. Donors may indicate preferences (school, district, region). If no preference is set, the protocol allocates funds automatically based on need."
+        },
+        {
+            question: "8. What happens when lunch debt is eliminated?",
+            answer: "The corresponding LMY offset credits are permanently retired (burned), and the school's debt bar moves toward 100%."
+        },
+        {
+            question: "9. What does \"Lunch Money Certified: Debt-Free\" mean?",
+            answer: "It means a school's lunch debt has been fully offset through the Lunch Money hedge and verified through transparent reporting."
+        },
+        {
+            question: "10. Is Lunch Money transparent?",
+            answer: "Yes. All offset credits issued and retired are recorded on-chain, providing public verification of impact without exposing student data."
+        },
+        {
+            question: "11. Is Lunch Money compliant with regulations?",
+            answer: "Lunch Money is designed with compliance in mind. LMY functions as an accounting and settlement unit, not a financial security. The platform avoids yield, speculation, and consumer crypto exposure."
+        },
+        {
+            question: "12. Is Lunch Money a charity?",
+            answer: "Lunch Money may work with charitable partners, but it functions as a technology platform that provides transparent debt-offset infrastructure."
+        },
+        {
+            question: "13. How is this different from fundraising?",
+            answer: "Fundraising is episodic and opaque. Lunch Money is continuous, automated, and verifiable—every dollar is tracked from contribution to debt elimination."
+        },
+        {
+            question: "14. Can organizations or companies participate?",
+            answer: "Yes. Corporations, foundations, nonprofits, and community partners can fund the Lunch Money pool and receive transparent proof of impact."
+        },
+        {
+            question: "15. What does it cost schools to participate?",
+            answer: "Schools do not pay to receive lunch debt protection. Participation terms may vary by district and partnership."
+        },
+        {
+            question: "16. Why use blockchain at all?",
+            answer: "Blockchain provides: • Public verification • Immutable accounting • Transparent issuance and retirement of offset credits. It ensures trust without exposing schools or students to complexity."
+        },
+        {
+            question: "17. What is the long-term goal?",
+            answer: "To make school lunch debt a thing of the past by creating a permanent, scalable protection mechanism."
         },
     ]
 
@@ -57,7 +105,7 @@ export default function Faq() {
                                     </div>
                                     <div 
                                         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                                            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                            isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                                         }`}
                                     >
                                         <div className='flex justify-between items-center py-3 sm:py-4 px-3 sm:px-4 md:px-5 border-t border-[#b1b1b1c4]'>

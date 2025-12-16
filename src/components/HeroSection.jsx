@@ -4,23 +4,23 @@ export default function HeroBanner() {
 
     const features = [
         {
-            title: <p>Track School Lunch <br /> Debt</p>,
-            description: "See how much unpaid meal debt exists and how many students are affected. ",
+            title: <p>Donors Fund the <br /> Pool</p>,
+            description: "Donors contribute to a shared Lunch Money pool dedicated exclusively to offsetting lunch debt. ",
             image: "/assets/chart.svg"
         },
         {
-            title: <p>Build a Protective <br /> Hedge</p>,
-            description: "Lunch Money grows a hedge fund dedicated to absorbing school lunch debt.  ",
+            title: <p>Offset Credits Are <br /> Issued</p>,
+            description: "For every dollar contributed, the protocol issues LMY offset credits as on-chain proof of funding.",
             image: "/assets/shield.svg"
         },
         {
-            title: <p>Ensure No Child Is Denied <br /> Lunch</p>,
-            description: "The hedge offsets negative balances so every student can eat with dignity.   ",
+            title: <p>Debt Is Offset <br /> Automatically</p>,
+            description: "The protocol automatically applies LMY credits to eligible schools based on transparent rules.",
             image: "/assets/trayMeal.svg"
         },
         {
-            title: <p>Become a Debt-Free <br /> Certified School </p>,
-            description: "Once your hedge reaches 100%, your school earns official Lunch Money certification.  ",
+            title: <p>Debt Is Retired <br /> Permanently</p>,
+            description: "When lunch debt is eliminated, the corresponding LMY credits are permanently retired on-chain.",
             image: "/assets/badge.svg"
         }
     ]

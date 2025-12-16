@@ -79,14 +79,14 @@ export default function DebtTracker() {
                 </div>
                 <div className='bg-white flex items-center justify-center rounded-2xl mt-6 sm:mt-8 md:mt-10 py-6 sm:py-8 px-4 sm:px-6'>
                     <div className='w-full max-w-2xl'>
-                        <p className='text-[#0D4E9E] text-center text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-[700] px-2 sm:px-4 md:px-6 py-4 sm:py-6'>Enter your school's outstanding lunch debt to calculate how much Lunch Money hedge coverage is required to eliminate it. </p>
+                        <p className='text-[#0D4E9E] text-center text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-[700] px-2 sm:px-4 md:px-6 py-4 sm:py-6'>Enter a school’s unpaid lunch balance to see how many Lunch Money (LMY) offset credits are required to eliminate the debt.</p>
                         <div className='text-center mb-4 sm:mb-6'>
                             {loading && (
                                 <p className='text-[#6E95C5] text-sm sm:text-[14px] md:text-[16px] font-[600]'>Loading price data...</p>
                             )}
                             {!loading && lmyPrice && (
                                 <p className='text-[#6E95C5] text-sm sm:text-[14px] md:text-[16px] font-[600]'>
-                                    Current LMY/USD Rate: <span className='text-[#FF8823] font-[700]'>${lmyPrice.toFixed(6)}</span> (≈ USDT)
+                                    Offset capacity is calculated at $1 of lunch debt = <span className='text-[#FF8823] font-[700]'>${lmyPrice.toFixed(6)} LMY</span>
                                 </p>
                             )}
                             {!loading && error && (
