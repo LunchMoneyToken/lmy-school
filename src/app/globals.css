@@ -147,4 +147,18 @@ font-family: "Archivo"
     font-size: 14px;
     color: white;
   }
+
+  /* Login page background - hidden on mobile */
+  .login-bg {
+    background-image: url(/assets/map.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 767px) {
+    .login-bg {
+      background-image: none;
+    }
+  }
   

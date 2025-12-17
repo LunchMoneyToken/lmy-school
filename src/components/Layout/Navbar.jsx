@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Image from "next/image"
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const router = useRouter()
     const navItems = [
         { label: "Home", id: "home" },
         { label: "Benefits", id: "benefits" },
@@ -61,7 +62,7 @@ export default function Navbar() {
                         <span className="sm:hidden">Wallet</span>
                     </button>
                     <button 
-                        onClick={scrollToEnrollment}
+                        onClick={() => router.push('/login')}
                         className="bg-[#C0C7CF] px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-md text-[#000] font-[600] cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#a8b3c0] active:scale-95 transform text-xs sm:text-sm"
                     >
                         <span className="hidden sm:inline">Create Account</span>

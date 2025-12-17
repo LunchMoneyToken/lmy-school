@@ -58,7 +58,7 @@ export default function DebtTracker() {
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-8 sm:mt-10 md:mt-14'>
                     <div className='bg-white rounded-2xl p-4 sm:p-5 md:p-6'>
                         <p className='text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-[700]'>National Lunch Debt (Reported Districts) </p>
-                        <p className='text-[#0D4E9E] text-[28px] sm:text-[36px] md:text-[42px] lg:text-[50px] font-[800] mt-2'>$20,300,000  </p>
+                        <p className='text-[#0D4E9E] text-[28px] sm:text-[36px] md:text-[42px] lg:text-[50px] font-[800] mt-2'>$194 million</p>
                     </div>
                     <div className='bg-white rounded-2xl p-4 sm:p-5 md:p-6'>
                         <p className='text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-[700]'>Schools Participating in Lunch Money  </p>

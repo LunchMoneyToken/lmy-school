@@ -1,6 +1,6 @@
-import Navbar from '../components/Navbar'
-import Home from '../components/Home'
-import Footer from '../components/Footer'
+import Navbar from '../components/Layout/Navbar'
+import Home from '../components/Home/Home'
+import Footer from '../components/Layout/Footer'
 
 export default function Page() {
   return (
