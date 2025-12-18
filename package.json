@@ -1,5 +1,6 @@
 {
   "name": "lunchmoney",
+  "type": "module",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -19,6 +20,7 @@
     "swiper": "^12.0.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/node": "^22.10.2",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -26,6 +28,9 @@
     "dotenv": "^17.2.3",
     "eslint": "^9.39.1",
     "eslint-config-next": "^15.1.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^16.5.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"

@@ -1,10 +1,11 @@
 'use client'
+import { Suspense } from 'react'
 import CreateFormPartner from '../../components/Auth/CreateFormPartner'
 import CreateFormSchool from '../../components/Auth/CreateFormSchool'
 import LocationAnim from '../../components/Auth/LocationAnim'
 import { useSearchParams } from 'next/navigation'
 
-export default function Create() {
+function CreateContent() {
     const searchParams = useSearchParams()
     const accountType = searchParams.get('accountType')?.toLowerCase()
 
@@ -22,5 +23,13 @@ export default function Create() {
 
             </div>
         </div>
+    )
+}
+
+export default function Create() {
+    return (
+        <Suspense fallback={<div className="min-h-screen w-full login-bg flex items-center justify-center">Loading...</div>}>
+            <CreateContent />
+        </Suspense>
     )
 }
