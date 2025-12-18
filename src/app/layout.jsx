@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "lunchmoney",
+  title: "LunchMoney",
   description: "Lunch Money Application",
   icons: {
     icon: "/favicon.png",
