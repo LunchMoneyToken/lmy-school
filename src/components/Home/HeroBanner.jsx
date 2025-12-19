@@ -6,8 +6,8 @@ export default function HeroSection() {
      const router = useRouter()
 
     return (
-        <div className="px-4 sm:px-6 md:px-8">
-            <div className="flex items-center justify-center w-full min-h-[400px] sm:h-[400px] md:h-[500px] lg:h-[565px] rounded-xl overflow-hidden py-8 sm:py-4" style={{ backgroundImage: `url(/assets/heroSection.png)`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+        <div className="">
+            <div className="flex items-center justify-center w-full min-h-[400px] sm:h-[400px] md:h-[500px] lg:h-[565px] rounded-xl overflow-hidden py-8 sm:py-2" style={{ backgroundImage: `url(/assets/heroSection.png)`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
                 <div className="w-full max-w-4xl px-2 sm:px-4">
                     <div className="flex justify-center px-2 sm:px-4">
                         <Image src="/assets/heading.svg" alt="heading" width={800} height={200} className="h-auto w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] object-contain" />

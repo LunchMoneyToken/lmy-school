@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <div className='max-w-[1280px] mx-auto pt-8'>
+      <div className='max-w-[1280px] mx-auto pt-2 md:pt-8'>
         <Home />
       </div>
       <Footer />
