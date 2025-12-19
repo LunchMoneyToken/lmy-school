@@ -27,6 +27,7 @@ export default function LocationAnim() {
         { left: '55%', top: '25%' },
         { left: '83%', top: '28%' },
         { left: '24%', top: '40%' },
+        { left: '44%', top: '40%' },
         { left: '60%', top: '42%' },
         { left: '80%', top: '42%' },
         { left: '10%', top: '50%' },
@@ -61,10 +62,6 @@ export default function LocationAnim() {
                     }`}
                 />
             ))}
-            <div className='relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center'>
-                <Image src="/assets/blue_map_pin.svg" alt="logo" width={50} height={100} />
-                <Image src="/assets/map_pin_info.svg" alt="logo" width={200} height={100} className='absolute -top-[90px]' />
-            </div>
         </div>
     )
 }
